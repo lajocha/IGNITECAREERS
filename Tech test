@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method = "post" action = "<?php echo $_SERVER['PHP_SELF'];?>">
+Name: <input type = "text" name = "fname">
+Password: <input type = "text" name = "pass">
+<input type = "Submit">
+  
+  </form>
+
+<?php
+  if ($_SERVER ["REQUEST_METHOD"] == "POST")
+  {$valid_user=("qwertyuiop"); $valid_pass=("jobld 10"); $name=$_POST['fname']; $pass=$_POST['pass'];
+   if (($name==$valid_user) && ($pass==$valid_pass)) {
+echo "Welcome User!";
+   }
+else{
+echo "Unauthorized Log-in! Please check credentials.";
+}
+  }
+
+?>
+
+  </body>
+</html>
